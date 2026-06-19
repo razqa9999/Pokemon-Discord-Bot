@@ -1,0 +1,56 @@
+# Pokemon Discord Bot
+
+Bot Discord interaktif untuk bermain dan mengelola Pokémon di server Discord Anda.
+
+## Deskripsi Proyek
+
+Pokemon Discord Bot adalah aplikasi yang mengintegrasikan permainan Pokémon langsung ke dalam Discord. Pengguna dapat menangkap Pokémon, melihat informasi detail, dan mengelola koleksi mereka melalui perintah Discord yang sederhana.
+
+## Fitur Utama
+
+- **Menangkap Pokémon**: Gunakan perintah `!go` untuk mendapatkan Pokémon baru secara acak
+- **Tiga Jenis Pokémon**:
+  - Pokemon biasa
+  - Wizard (Pokémon penyihir)
+  - Fighter (Pokémon pejuang)
+- **Informasi Pokémon**: Lihat detail Pokémon Anda termasuk nama, kemampuan, HP, kekuatan, dan level
+- **Gambar Pokémon**: Tampilkan gambar Pokémon dari PokeAPI secara otomatis
+- **Data Persisten**: Sistem menyimpan Pokémon yang telah ditangkap per pengguna
+
+## Struktur Proyek
+
+```
+├── main.py          # File utama - Discord bot dan command handler
+├── logic.py         # Logika permainan - Class Pokemon, Wizard, Fighter
+├── config.py        # Konfigurasi - Token Discord bot
+└── README.md        # File dokumentasi
+```
+
+## Teknologi yang Digunakan
+
+- **discord.py** - Library untuk membuat Discord bot
+- **aiohttp** - Library untuk HTTP request asinkron
+- **PokeAPI** - API untuk data Pokémon dan gambar
+- **Flask** - Web framework (context management)
+
+## Perintah yang Tersedia
+
+| Perintah | Deskripsi |
+|----------|-----------|
+| `!go` | Menangkap Pokémon baru dan melihat detailnya |
+| `!info` | Melihat informasi Pokémon yang telah ditangkap |
+
+## Cara Penggunaan
+
+1. Jalankan bot di server Discord Anda
+2. Gunakan `!go` untuk mendapatkan Pokémon pertama Anda
+3. Gunakan `!info` untuk melihat detail Pokémon Anda
+4. Bot akan menampilkan gambar Pokémon dari PokeAPI
+
+## Catatan Teknis
+
+- Bot menggunakan intent Discord yang diperlukan untuk membaca konten pesan
+- Setiap pengguna dapat memiliki satu Pokémon yang disimpan dalam dictionary
+- Data Pokémon diambil dari PokeAPI secara real-time
+- Sistem asinkron memastikan performa optimal dengan multiple requests
+
